@@ -1,0 +1,55 @@
+Request Headers
+User-Agent: PostmanRuntime/7.26.10
+Essentially a fingerprint of the browser or program that is sending the request, containing info like what program and what version number of the program is sending the request.
+
+Accept: */*
+What content types the client can understand. In this case it accepts any content type.
+
+Postman-Token: e97e8142-dd8c-4097-94fd-b5a0cc6676bc
+Apparently used to bypass a bug in chrome where Chrome will erroneously return the same response for two different requests.
+
+Host: www.googleapis.com
+The host and port to which the request is being sent
+
+Accept-Encoding: gzip, deflate, br
+What encoding/compression algorithms the client can understand.
+
+Connection: keep-alive
+Whether or not to keep the connection open after the current interaction finishes. In this case, yes.
+
+
+
+
+Response Headers
+Content-Type: application/json; charset=UTF-8
+What the format of the returned content is.
+
+Vary: Origin
+Vary: X-Origin
+Vary: Referer
+Tells whether or not cached content can be used or whether the content needs to be sent over again.
+Apparently Origin, X-Origin, and Referer refer to CORS, which is a system that allows a server to indicate to the browser to permit resources from domains other than the server to be downloaded.
+ 
+Content-Encoding: gzip
+What the encoding/compression of the content returned is.
+
+Date: Fri, 29 Jan 2021 00:33:47 GMT
+Self-explanatory.
+
+Server: ESF
+The software used by the server that handled the request
+
+Cache-Control: private
+Instructions on how to handle caching for both requests and responses.
+
+X-XSS-Protection: 0
+Browser-specific header that stops pages from loading when they contain cross-site scripting attacks.
+
+X-Frame-Options: SAMEORIGIN
+Indicate to a browser whether they should allow a page to be rendered within specific HTML objects. Used to avoid specific attacks and exploits by ensuring that page can’t be embedded within another page.
+
+X-Content-Type-Options: nosniff
+Indicates that the types in Content-Type shouldn’t be changed. In other words, indicates that the types set in Content-Type have been deliberately configured.
+
+Alt-Svc: h3-29=":443"; ma=2592000,h3-T051=":443"; ma=2592000,h3-Q050=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
+Shows alternate ways that the resource can be reached.
